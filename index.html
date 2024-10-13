@@ -14,6 +14,28 @@
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, dolores. Voluptatem cupiditate tempora cum perferendis ab voluptate, nihil suscipit ullam, fugit similique soluta rem deserunt doloribus quos consectetur, consequuntur nostrum.
     </div>
 
-    <script></script>
+    <form id="emailForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Submit</button>
+      </form>
+
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', async function(e) {
+    const email = document.getElementById('email').value;
+    // Envía el email al backend
+    const response = await fetch('http://localhost:3000/submit-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email })
+    });
+
+    console.log("hola")
+    const result = await response.text();
+    alert(result);  // Muestra el resultado
+  });
+    </script>
 </body>
 </html>

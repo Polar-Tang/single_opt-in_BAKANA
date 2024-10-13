@@ -1,6 +1,8 @@
 body{
     background-color: #D6C0B3;
-    background-image: url("./public/TELETUBIES.jpg");
+    background-image: url("./public/penege.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body, html {
@@ -13,7 +15,7 @@ body, html {
 
 .centered-div {
     width: 300px;
-    background-color: lightgreen;
+    background-color: rgba(144, 238, 144, 0.123);
     padding: 20px;
     text-align: center;
 }
