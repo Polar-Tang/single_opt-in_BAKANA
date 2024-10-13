@@ -1,0 +1,19 @@
+body{
+    background-color: #D6C0B3;
+    background-image: url("./public/TELETUBIES.jpg");
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;   /* Horizontally centers */
+    align-items: center;       /* Vertically centers */
+}
+
+.centered-div {
+    width: 300px;
+    background-color: lightgreen;
+    padding: 20px;
+    text-align: center;
+}
