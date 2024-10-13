@@ -24,7 +24,7 @@
         document.getElementById('emailForm').addEventListener('submit', async function(e) {
     const email = document.getElementById('email').value;
     // Envía el email al backend
-    const response = await fetch('http://localhost:3000/submit-email', {
+    const response = await fetch('https://white-bakana-backend.vercel.app/?vercelToolbarCode=uTnvvRcPUPUZ352/submit-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
