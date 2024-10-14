@@ -10,7 +10,7 @@
     
     <div class="centered-div">
         <h2>Proximámente</h2>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aliquid architecto explicabo vel excepturi iure placeat, eum fugiat officia ea ad maiores hic natus repudiandae officiis cumque accusantium. Consequatur, culpa?
+        Lorem ipsum dolor sit lorem mre amet, consectetur adipisicing elit. Earum aliquid architecto explicabo vel excepturi iure placeat, eum fugiat officia ea ad maiores hic natus repudiandae officiis cumque accusantium. Consequatur, culpa?
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, dolores. Voluptatem cupiditate tempora cum perferendis ab voluptate, nihil suscipit ullam, fugit similique soluta rem deserunt doloribus quos consectetur, consequuntur nostrum.
     </div>
 
@@ -30,7 +30,8 @@
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ email }),
+        mode:"no-cors"
     });
 
     if (response.ok) {
