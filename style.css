@@ -1,21 +1,89 @@
-body{
-    background-color: #D6C0B3;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url("./public/penege.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;   /* Horizontally centers */
-    align-items: center;       /* Vertically centers */
-}
-
-.centered-div {
-    width: 300px;
-    background-color: rgba(144, 238, 144, 0.123);
-    padding: 20px;
+    height: 100vh;
+    background-color: black;
+    color: white;
     text-align: center;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Playfair Display, Great Vibes'; 
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+h2 {
+    font-family: 'Playfair Display, Great Vibes'; 
+    font-size: 1rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+p {
+    font-family: 'Playfair Display, Great Vibes'; 
+    margin: 20px 0;
+}
+
+.notify-container {
+    margin-top: 30px;
+}
+
+#notify-btn {
+    background-color: white;
+    color: black;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-hand {
+    display: inline-block;
+    font-family: 'Poppins, Montserrat';
+    margin-left: 10px;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    position: relative
+}
+.hand-image {
+    position: absolute; /* Posiciona la imagen en relación a su contenedor padre */
+    top: 50%; /* Ajusta la posición de la imagen según tus necesidades */
+    left: 50%;
+    margin-left: 20px;
+    transform: translate(-50%, -50%); /* Centrar la imagen */
+    width: 60px; /* Ajusta el tamaño de la imagen */
+}
+
+.brand {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-top: 50px;
+}
+
+
+
