@@ -348,3 +348,46 @@ p {
     }
     /* Otros estilos específicos para ese tamaño */
 }
+
+/* FORMULARIO DE NOTIFICAR ---------------------------------------------------------------------- */
+
+#emailForm {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    gap: 10px;
+    width: 300px;
+    margin-top: 50px;
+    font-size: 1.5rem;
+    animation-duration: 1s; 
+    background-color: rgba(240, 248, 255, 0.329);
+}
+
+.hidden {
+    visibility: hidden; /* Oculta el formulario pero permite la animación */
+    opacity: 0;         /* Para que comience invisible */
+    transition: opacity 0.5s ease-out; /* Para una transición suave */
+}
+
+.visible {
+    visibility: visible; /* Hace visible el formulario */
+    opacity: 1;          /* Totalmente visible */
+    animation: slidein 0.5s ease-out; /* Aplica la animación de desvanecimiento */
+}
+
+@keyframes slidein {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    68%, 72% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
