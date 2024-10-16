@@ -34,7 +34,7 @@ h1 {
 h2 {
     font-family: 'Playfair Display, Great Vibes'; 
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
     letter-spacing: 2px;
 }
 
@@ -71,12 +71,13 @@ p {
     position: relative
 }
 .hand-image {
-    position: absolute; /* Posiciona la imagen en relación a su contenedor padre */
-    top: 50%; /* Ajusta la posición de la imagen según tus necesidades */
+    position: absolute;
+    top: 50%;
     left: 50%;
     margin-left: 20px;
-    transform: translate(-50%, -50%); /* Centrar la imagen */
-    width: 60px; /* Ajusta el tamaño de la imagen */
+    transform: translate(-50%, -50%); 
+    width: 60px; 
+    margin-top: 5px;
 }
 
 .brand {
@@ -87,3 +88,263 @@ p {
 
 
 
+/* CEEELUUU --------------------------------------------------- */
+
+
+
+@media (max-width: 400px) and (max-width: 500px) {
+
+    h1 {
+        font-family: 'Playfair Display, Great Vibes'; 
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 20px 0;
+        margin-bottom: 100px;
+
+    }
+    
+    h2 {
+        font-family: 'Playfair Display, Great Vibes'; 
+        font-size: 0.5rem;
+        margin-bottom: 100px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 400px) and (max-width: 900px) {
+
+    h1 {
+        font-family: 'Playfair Display, Great Vibes'; 
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 20px 0;
+        margin-bottom: 100px;
+
+    }
+    
+    h2 {
+        font-family: 'Playfair Display, Great Vibes'; 
+        font-size: 1rem;
+        margin-bottom: 150px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 600px) and (max-width: 1000px) {
+
+    h1 {
+        font-family: 'Playfair Display, Great Vibes'; 
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 20px 0;
+        margin-bottom: 100px;
+
+    }
+    
+    h2 {
+        font-family: 'Playfair Display, Great Vibes'; 
+        font-size: 0.7rem;
+        margin-bottom: 150px;
+        letter-spacing: 2px;
+    }
+}
+/* IPAD --------------------------------------------------- */
+
+/* SAMSUNG GALXY S20 ULTRA -------------------------- */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+    h1 {
+        font-size: 4rem;
+    }
+
+
+    #notify-btn {
+        margin-top: 100px;
+    }
+
+    .creando{
+        position: absolute;
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 1180px) and (orientation: portrait) {
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        position: absolute;
+        font-size: 1.5rem;
+        margin-bottom: 800px;
+    }
+
+    #notify-btn {
+        margin-top: 150px;
+        width: 300px;
+        height: 60px;
+        gap: 50px;
+        font-size: 1.5rem;
+    }
+
+    .creando{
+        position: absolute;
+        margin-top: 100px;
+        font-size: 1.5rem;
+    }
+
+    .notify-container{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .hand-image{
+        width: 100px;
+    }
+
+    .brand{
+        position: absolute;
+        font-size: 1.5rem;
+        margin-top: 700px;
+    }
+}
+
+/* LAPTOPS --------------------------------------------------- */
+
+@media (min-width: 1368px) and (max-width: 1368px) and (min-height: 912px) and (max-height: 912px) {
+    /* Esto se aplicará a dispositivos con exactamente 1368px de ancho y 1024px de altura */
+
+    .container {
+        gap: 50px;
+
+    }
+
+    h2{
+        font-size: 1.5rem;
+        margin-bottom: 100px;
+        letter-spacing: 2px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .notify-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px;
+    }
+    
+
+    #notify-btn {
+        position: absolute;
+        margin-top: -300px;
+        width: 300px;
+        height: 50px;
+        gap: 50px;
+        font-size: 1.5rem;
+    }
+
+    .hand-image{
+        width: 100px;
+    }
+    /* Otros estilos específicos para ese tamaño */
+}
+
+@media (min-width: 1280px) and (max-width: 1280px) and (min-height: 853px) and (max-height: 853px) {
+    /* Esto se aplicará a dispositivos con exactamente 1368px de ancho y 1024px de altura */
+
+    .container {
+        gap: 50px;
+
+    }
+
+    h2{
+        font-size: 1.5rem;
+        margin-bottom: 100px;
+        letter-spacing: 2px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .notify-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px;
+    }
+    
+
+    #notify-btn {
+        position: absolute;
+        margin-top: -300px;
+        width: 300px;
+        height: 50px;
+        gap: 50px;
+        font-size: 1.5rem;
+    }
+
+    .hand-image{
+        width: 100px;
+    }
+
+    .creando{
+        position: absolute;
+        margin-top: 100px;
+        font-size: 1.5rem;
+    }
+    /* Otros estilos específicos para ese tamaño */
+}
+
+@media (min-width: 1280px) and (max-width: 1280px) and (min-height: 800px) and (max-height: 800px) {
+    /* Esto se aplicará a dispositivos con exactamente 1368px de ancho y 1024px de altura */
+
+    .container {
+        gap: 50px;
+
+    }
+
+    h2{
+        font-size: 1.5rem;
+        margin-bottom: 100px;
+        letter-spacing: 2px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .notify-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px;
+    }
+    
+
+    #notify-btn {
+        position: absolute;
+        margin-top: -300px;
+        width: 300px;
+        height: 50px;
+        gap: 50px;
+        font-size: 1.5rem;
+    }
+
+    .hand-image{
+        width: 100px;
+    }
+
+    .creando{
+        position: absolute;
+        margin-top: 100px;
+        font-size: 1.5rem;
+    }
+    /* Otros estilos específicos para ese tamaño */
+}
