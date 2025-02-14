@@ -1,76 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Próximamente</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./public/bakana(1).png"
+    <link rel="icon" href="./public/bakana(1).png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./output.css">
 </head>
+
 <body>
-    
-    <div class="centered-div container">
-        <form id="emailForm" class="hidden" >
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Submit</button>
-            
-          </form> 
-          <h2 class="d-flex align-items-start">NUESTRA WEB ESTARÁ DISPONIBLE MUY PRONTO</h2>
-            <h1 class="d-flex justify-content-center">¡Próximamente!</h1>
-            <p class="creando" >Estamos creando para vos.</p>
-            <div class="notify-container">
-            <button id="notify-btn">
-                NOTIFICAR 
-                <span class="icon-hand" type="button">
-                    <img src="./public/hand.gif" class="hand-image"/>
+
+    <div
+        class="grid grid-cols-1 gap-4 justify-center items-center w-full max-w-lg px-4flex justify-center items-center h-screen bg-black text-white text-center bg-cover bg-no-repeat min-h-screen bg-transparent">
+
+        <!-- Hidden Email Form -->
+             <form id="emailForm" class="hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background-image: url('./public/nube.png'); background-size: cover; ">
+                 <label for="email" class="block text-black text-sm font-medium">Email:</label>
+                 <input type="email" id="email" name="email" required
+                     class="mt-1 p-2 w-50 border border-gray-300 rounded-md text-black">
+                 <button type="submit" class="mt-2 px-4 py-2 bg-white text-black rounded-lg">Submit</button>
+             </form>
+
+
+        <!-- Title and Subtitle -->
+        <center>
+            <h2 class="w-60">NUESTRA WEB ESTARÁ DISPONIBLE MUY PRONTO</h2>
+
+        </center>
+        <h1 class="text-6xl font-normal font-serif mb-4">¡Próximamente!</h1>
+        <p class="text-lg tracking-tight font-sans">Estamos creando para vos.</p>
+
+        <!-- Notify Button -->
+        <center class="mt-8 relative">
+            <button id="notify-btn"
+                class="bg-white text-black px-8 py-3 text-lg font-sans rounded-full flex items-center justify-center relative">
+                <span>NOTIFICAR</span>
+                <span class="ml-2 relative w-6 h-6">
+                    <img src="./public/hand.gif"
+                        class="absolute top-1/2 left-1/2 -translate-x-1/8 -translate-y-1/2 max-w-6xl" />
                 </span>
             </button>
-          <p class="brand">WHITE BAKANA®</p>
-          </div>
+        </center>
+
+        <!-- Brand -->
+        <!-- <p class="text-sm tracking-wide mt-12">WHITE BAKANA®</p> -->
+
     </div>
 
     <script>
-        const notifyBtn = document.getElementById('notify-btn');
-        const emailForm = document.getElementById('emailForm');
-    
-        notifyBtn.addEventListener('click', function() {
-        // Alterna las clases 'hidden' y 'visible' en el formulario
-        if (emailForm.classList.contains('hidden')) {
-            emailForm.classList.remove('hidden');
-            emailForm.classList.add('visible');
-        } else {
-            emailForm.classList.remove('visible');
-            emailForm.classList.add('hidden');
-        }
-    });
-        
-        document.getElementById('emailForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            
+        const notifyBtn = document.getElementById('notify-btn')
+        const emailForm = document.getElementById('emailForm')
+
+        notifyBtn.addEventListener('click', function () {
+            // Alterna las clases 'hidden' y 'visible' en el formulario
+            if (emailForm.classList.contains('hidden')) {
+                emailForm.classList.remove('hidden')
+                emailForm.classList.add('visible')
+            } else {
+                emailForm.classList.remove('visible')
+                emailForm.classList.add('hidden')
+            }
+        })
+
+        document.getElementById('emailForm').addEventListener('submit', async function (e) {
+            e.preventDefault()
+            const email = document.getElementById('email').value
+
             const response = await fetch('https://fiscal-mommy-virtual-nautilus-a7c0219d.koyeb.app/ping', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ "email" : email }),
-        }) 
-        .then(response => response.text()).then(data => console.log(data)).catch((error) => console.error('Error:', error));
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ "email": email }),
+            })
+                .then(response => response.text()).then(data => console.log(data)).catch((error) => console.error('Error:', error))
 
-        const data = await response.json();
-        console.log(data);
-        console.log(response)
-
-    if (response.ok) {
-        const result = await response.text();
-        alert(result);  // Show result
-    } else {
-        console.error('Request failed:', response.status, response.statusText);
-        alert('Error submitting email');
-    }
-    });
+            const data = await response.json()
+           
+            if (response.ok) {
+                const result = await response.text()
+                alert(result)
+            } else {
+                console.error('Request failed:', response.status, response.statusText)
+                alert('Error submitting email')
+            }
+        })
 
     </script>
 </body>
+
 </html>

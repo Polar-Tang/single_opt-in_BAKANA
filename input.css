@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@tailwind base;
+
+
+@layer base {
+  img {
+    width: 60px;
+  }
+  
+}

@@ -1,7 +1,28 @@
+@font-face {
+    font-family: 'TT Commons Pro';
+    src: url('./fonts/TT_Commons_Pro.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Castoro';
+    src: url('./fonts/CastoroTitling-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('./fonts/static/Vollkorn-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/static/Montserrat-Regular.ttf') format('truetype');
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-width: 0;
+    overflow-wrap: break-word;
 }
 
 body {
@@ -15,6 +36,8 @@ body {
     background-color: black;
     color: white;
     text-align: center;
+    font-family: 'Inter', sans-serif;
+
 }
 
 .container {
@@ -24,28 +47,36 @@ body {
     align-items: center;
 }
 
+
 h1 {
-    font-family: 'Playfair Display, Great Vibes'; 
+    font-family: 'Vollkorn', serif;
     font-size: 4rem;
-    font-weight: bold;
-    margin: 20px 0;
+    font-weight: normal;
+    /* margin: 100px 0; */
+    /* margin-bottom: 100px; */
 }
 
 h2 {
-    font-family: 'Playfair Display, Great Vibes'; 
+    font-family: 'Vollkorn', serif; 
     font-size: 1rem;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     letter-spacing: 2px;
 }
 
 p {
-    font-family: 'Playfair Display, Great Vibes'; 
-    margin: 20px 0;
+    font-family: 'Montserrat', sans-serif; 
+    letter-spacing: .025rem;
+    /* margin: 20px 0; */
 }
 
-.notify-container {
-    margin-top: 30px;
+.NOTIFICAR{
+    font-family: 'Montserrat', sans-serif; 
+    
 }
+
+ .notify-container {
+    margin-top: 30px;
+} 
 
 #notify-btn {
     background-color: white;
@@ -64,7 +95,7 @@ p {
 .icon-hand {
     display: inline-block;
     font-family: 'Poppins, Montserrat';
-    margin-left: 10px;
+    /* margin-left: 10px; */
     background-size: cover;
     width: 20px;
     height: 20px;
@@ -74,28 +105,27 @@ p {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: 20px;
+    /* margin-left: 20px;  */
     transform: translate(-50%, -50%); 
     width: 60px; 
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 
 .brand {
     font-size: 0.9rem;
     letter-spacing: 2px;
-    margin-top: 50px;
-}
-
+    /* margin-top: 50px; */
+} 
 
 
 /* CEEELUUU --------------------------------------------------- */
 
 
 
-@media (max-width: 400px) and (max-width: 500px) {
+/* @media (max-width: 400px) and (max-width: 500px) {
 
     h1 {
-        font-family: 'Playfair Display, Great Vibes'; 
+        font-family: url(./__MACOSX/._TT\ Commons\ Pro\ Trial\ Expanded\ Thin\ Italic.ttf); 
         font-size: 3rem;
         font-weight: bold;
         margin: 20px 0;
@@ -104,7 +134,7 @@ p {
     }
     
     h2 {
-        font-family: 'Playfair Display, Great Vibes'; 
+        font-family: url(./__MACOSX/._TT\ Commons\ Pro\ Trial\ Expanded\ Thin\ Italic.ttf); 
         font-size: 0.5rem;
         margin-bottom: 100px;
         letter-spacing: 2px;
@@ -114,7 +144,7 @@ p {
 @media (max-width: 400px) and (max-width: 900px) {
 
     h1 {
-        font-family: 'Playfair Display, Great Vibes'; 
+        font-family: url(./__MACOSX/._TT\ Commons\ Pro\ Trial\ Expanded\ Thin\ Italic.ttf); 
         font-size: 2rem;
         font-weight: bold;
         margin: 20px 0;
@@ -123,7 +153,7 @@ p {
     }
     
     h2 {
-        font-family: 'Playfair Display, Great Vibes'; 
+        font-family: url(./__MACOSX/._TT\ Commons\ Pro\ Trial\ Expanded\ Thin\ Italic.ttf); 
         font-size: 1rem;
         margin-bottom: 150px;
         letter-spacing: 2px;
@@ -133,7 +163,7 @@ p {
 @media (max-width: 600px) and (max-width: 1000px) {
 
     h1 {
-        font-family: 'Playfair Display, Great Vibes'; 
+        font-family: url(./__MACOSX/._TT\ Commons\ Pro\ Trial\ Expanded\ Thin\ Italic.ttf); 
         font-size: 3rem;
         font-weight: bold;
         margin: 20px 0;
@@ -142,15 +172,13 @@ p {
     }
     
     h2 {
-        font-family: 'Playfair Display, Great Vibes'; 
+        font-family: url(./__MACOSX/._TT\ Commons\ Pro\ Trial\ Expanded\ Thin\ Italic.ttf); 
         font-size: 0.7rem;
         margin-bottom: 150px;
         letter-spacing: 2px;
     }
 }
-/* IPAD --------------------------------------------------- */
 
-/* SAMSUNG GALXY S20 ULTRA -------------------------- */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 
@@ -212,10 +240,8 @@ p {
     }
 }
 
-/* LAPTOPS --------------------------------------------------- */
 
 @media (min-width: 1368px) and (max-width: 1368px) and (min-height: 912px) and (max-height: 912px) {
-    /* Esto se aplicará a dispositivos con exactamente 1368px de ancho y 1024px de altura */
 
     .container {
         gap: 50px;
@@ -252,11 +278,9 @@ p {
     .hand-image{
         width: 100px;
     }
-    /* Otros estilos específicos para ese tamaño */
 }
 
 @media (min-width: 1280px) and (max-width: 1280px) and (min-height: 853px) and (max-height: 853px) {
-    /* Esto se aplicará a dispositivos con exactamente 1368px de ancho y 1024px de altura */
 
     .container {
         gap: 50px;
@@ -299,11 +323,9 @@ p {
         margin-top: 100px;
         font-size: 1.5rem;
     }
-    /* Otros estilos específicos para ese tamaño */
 }
 
 @media (min-width: 1280px) and (max-width: 1280px) and (min-height: 800px) and (max-height: 800px) {
-    /* Esto se aplicará a dispositivos con exactamente 1368px de ancho y 1024px de altura */
 
     .container {
         gap: 50px;
@@ -346,8 +368,8 @@ p {
         margin-top: 100px;
         font-size: 1.5rem;
     }
-    /* Otros estilos específicos para ese tamaño */
 }
+
 
 /* FORMULARIO DE NOTIFICAR ---------------------------------------------------------------------- */
 
@@ -358,11 +380,10 @@ p {
     align-items: center;
     flex-direction: column; 
     gap: 10px;
-    width: 300px;
-    margin-top: 50px;
+    width: 100%;
+    height: 100%;
     font-size: 1.5rem;
     animation-duration: 1s; 
-    background-color: rgba(240, 248, 255, 0.329);
 }
 
 .hidden {
@@ -390,4 +411,18 @@ p {
     100% {
         opacity: 1;
     }
-}
+} 
+/* 
+.visible {
+    animation: cloudMove 20s linear infinite;
+} */
+
+@keyframes cloudMove {
+    0% {
+        background-position: 0% 50%; /* Start at left */
+    }
+    100% {
+        background-position: 100% 50%; /* Move to right */
+    }
+    }
+
