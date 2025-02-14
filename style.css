@@ -25,6 +25,11 @@
     overflow-wrap: break-word;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -50,7 +55,7 @@ body {
 
 h1 {
     font-family: 'Vollkorn', serif;
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: normal;
     /* margin: 100px 0; */
     /* margin-bottom: 100px; */
@@ -379,23 +384,17 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column; 
-    gap: 10px;
-    width: 100%;
-    height: 100%;
     font-size: 1.5rem;
-    animation-duration: 1s; 
+    object-fit: cover;
+    height: 100%;
+    background-size: 100%;
 }
 
-.hidden {
-    visibility: hidden; /* Oculta el formulario pero permite la animación */
-    opacity: 0;         /* Para que comience invisible */
-    transition: opacity 0.5s ease-out; /* Para una transición suave */
-}
-
+    
 .visible {
-    visibility: visible; /* Hace visible el formulario */
-    opacity: 1;          /* Totalmente visible */
-    animation: slidein 0.5s ease-out; /* Aplica la animación de desvanecimiento */
+    visibility: visible;
+    opacity: 1;         
+    animation: slidein 0.5s ease-out;
 }
 
 @keyframes slidein {
@@ -412,10 +411,14 @@ p {
         opacity: 1;
     }
 } 
-/* 
-.visible {
+
+.nube-container {
+    width: 100%;
+}
+
+.cloud-move {
     animation: cloudMove 20s linear infinite;
-} */
+}
 
 @keyframes cloudMove {
     0% {
@@ -425,4 +428,3 @@ p {
         background-position: 100% 50%; /* Move to right */
     }
     }
-

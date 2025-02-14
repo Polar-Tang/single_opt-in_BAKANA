@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Próximamente</title>
-    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
     <link rel="icon" href="./public/bakana(1).png">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./output.css">
 </head>
-
-<body>
-
+<body >
     <div
-        class="grid grid-cols-1 gap-4 justify-center items-center w-full max-w-lg px-4flex justify-center items-center h-screen bg-black text-white text-center bg-cover bg-no-repeat min-h-screen bg-transparent">
-
-        <!-- Hidden Email Form -->
-             <form id="emailForm" class="hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="background-image: url('./public/nube.png'); background-size: cover; ">
-                 <label for="email" class="block text-black text-sm font-medium">Email:</label>
-                 <input type="email" id="email" name="email" required
-                     class="mt-1 p-2 w-50 border border-gray-300 rounded-md text-black">
-                 <button type="submit" class="mt-2 px-4 py-2 bg-white text-black rounded-lg">Submit</button>
-             </form>
-
+    class="
+        grid 
+        grid-cols-1 
+        items-center 
+        h-screen 
+        bg-black 
+        text-center 
+        place-items-center
+        bg-black
+        bg-no-repeat 
+        min-h-screen
+        w-full 
+        bg-transparent
+        relative"
+        
+    >
+    
+        <form id="emailForm" 
+        class="
+        left-1/2
+        -translate-x-1/2 
+        -translate-y-1/8
+        w-full 
+        h-screen
+        bg-no-repeat 
+        opacity-0
+        absolute  
+        bg-contain 
+        bg-no-repeat 
+        bg-center
+        " 
+        style="background-image: url('./public/nube.png')">
+        
+        <label for="email" class="block text-black text-sm  font-medium">Email:</label>
+        <input type="email" id="email" name="email" required
+          class="mt-1 p-2 w-50 border border-gray-300 rounded-md text-black-500" style="color: black;">
+        <button type="submit" class="mt-2 px-4 py-2 bg-white text-black-500 bg-transparent rounded-lg" style="color: black;">Submit</button>
+      </form> 
 
         <!-- Title and Subtitle -->
-        <center>
-            <h2 class="w-60">NUESTRA WEB ESTARÁ DISPONIBLE MUY PRONTO</h2>
 
-        </center>
-        <h1 class="text-6xl font-normal font-serif mb-4">¡Próximamente!</h1>
-        <p class="text-lg tracking-tight font-sans">Estamos creando para vos.</p>
+
+                 <h2 class="
+                     w-60 
+                 ">NUESTRA WEB ESTARÁ DISPONIBLE MUY PRONTO</h2>
+                 <h1 class="text-sm ">¡Próximamente!</h1>
+                 <p class="text-lg tracking-tight font-sans">Estamos creando para vos.</p>
+
 
         <!-- Notify Button -->
-        <center class="mt-8 relative">
+        <div class="relative flex justify-center">
             <button id="notify-btn"
                 class="bg-white text-black px-8 py-3 text-lg font-sans rounded-full flex items-center justify-center relative">
                 <span>NOTIFICAR</span>
@@ -43,7 +70,7 @@
                         class="absolute top-1/2 left-1/2 -translate-x-1/8 -translate-y-1/2 max-w-6xl" />
                 </span>
             </button>
-        </center>
+        </div>
 
         <!-- Brand -->
         <!-- <p class="text-sm tracking-wide mt-12">WHITE BAKANA®</p> -->
@@ -55,14 +82,7 @@
         const emailForm = document.getElementById('emailForm')
 
         notifyBtn.addEventListener('click', function () {
-            // Alterna las clases 'hidden' y 'visible' en el formulario
-            if (emailForm.classList.contains('hidden')) {
-                emailForm.classList.remove('hidden')
-                emailForm.classList.add('visible')
-            } else {
-                emailForm.classList.remove('visible')
-                emailForm.classList.add('hidden')
-            }
+            emailForm.classList.toggle('visible'); 
         })
 
         document.getElementById('emailForm').addEventListener('submit', async function (e) {
@@ -91,5 +111,4 @@
 
     </script>
 </body>
-
 </html>
