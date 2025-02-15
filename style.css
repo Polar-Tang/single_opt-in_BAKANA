@@ -28,6 +28,7 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    max-height: 100%;
 }
 
 body {
@@ -37,19 +38,11 @@ body {
     background-image: url("./public/penege.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
     background-color: black;
     color: white;
     text-align: center;
     font-family: 'Inter', sans-serif;
 
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -122,260 +115,6 @@ p {
     /* margin-top: 50px; */
 } 
 
-
-/* CEEELUUU --------------------------------------------------- */
-
-
-
-/* @media (max-width: 400px) and (max-width: 500px) {
-
-    h1 {
-        font-family: url(./__MACOSX/._TT\ Commons\ Pro\ Trial\ Expanded\ Thin\ Italic.ttf); 
-        font-size: 3rem;
-        font-weight: bold;
-        margin: 20px 0;
-        margin-bottom: 100px;
-
-    }
-    
-    h2 {
-        font-family: url(./__MACOSX/._TT\ Commons\ Pro\ Trial\ Expanded\ Thin\ Italic.ttf); 
-        font-size: 0.5rem;
-        margin-bottom: 100px;
-        letter-spacing: 2px;
-    }
-}
-
-@media (max-width: 400px) and (max-width: 900px) {
-
-    h1 {
-        font-family: url(./__MACOSX/._TT\ Commons\ Pro\ Trial\ Expanded\ Thin\ Italic.ttf); 
-        font-size: 2rem;
-        font-weight: bold;
-        margin: 20px 0;
-        margin-bottom: 100px;
-
-    }
-    
-    h2 {
-        font-family: url(./__MACOSX/._TT\ Commons\ Pro\ Trial\ Expanded\ Thin\ Italic.ttf); 
-        font-size: 1rem;
-        margin-bottom: 150px;
-        letter-spacing: 2px;
-    }
-}
-
-@media (max-width: 600px) and (max-width: 1000px) {
-
-    h1 {
-        font-family: url(./__MACOSX/._TT\ Commons\ Pro\ Trial\ Expanded\ Thin\ Italic.ttf); 
-        font-size: 3rem;
-        font-weight: bold;
-        margin: 20px 0;
-        margin-bottom: 100px;
-
-    }
-    
-    h2 {
-        font-family: url(./__MACOSX/._TT\ Commons\ Pro\ Trial\ Expanded\ Thin\ Italic.ttf); 
-        font-size: 0.7rem;
-        margin-bottom: 150px;
-        letter-spacing: 2px;
-    }
-}
-
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-
-    h1 {
-        font-size: 4rem;
-    }
-
-
-    #notify-btn {
-        margin-top: 100px;
-    }
-
-    .creando{
-        position: absolute;
-        margin-top: 100px;
-    }
-}
-
-@media (min-width: 820px) and (max-width: 1180px) and (orientation: portrait) {
-
-    h1 {
-        font-size: 4rem;
-    }
-
-    h2 {
-        position: absolute;
-        font-size: 1.5rem;
-        margin-bottom: 800px;
-    }
-
-    #notify-btn {
-        margin-top: 150px;
-        width: 300px;
-        height: 60px;
-        gap: 50px;
-        font-size: 1.5rem;
-    }
-
-    .creando{
-        position: absolute;
-        margin-top: 100px;
-        font-size: 1.5rem;
-    }
-
-    .notify-container{
-        display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-
-    .hand-image{
-        width: 100px;
-    }
-
-    .brand{
-        position: absolute;
-        font-size: 1.5rem;
-        margin-top: 700px;
-    }
-}
-
-
-@media (min-width: 1368px) and (max-width: 1368px) and (min-height: 912px) and (max-height: 912px) {
-
-    .container {
-        gap: 50px;
-
-    }
-
-    h2{
-        font-size: 1.5rem;
-        margin-bottom: 100px;
-        letter-spacing: 2px;
-    }
-
-    h1 {
-        font-size: 4rem;
-    }
-
-    .notify-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 200px;
-    }
-    
-
-    #notify-btn {
-        position: absolute;
-        margin-top: -300px;
-        width: 300px;
-        height: 50px;
-        gap: 50px;
-        font-size: 1.5rem;
-    }
-
-    .hand-image{
-        width: 100px;
-    }
-}
-
-@media (min-width: 1280px) and (max-width: 1280px) and (min-height: 853px) and (max-height: 853px) {
-
-    .container {
-        gap: 50px;
-
-    }
-
-    h2{
-        font-size: 1.5rem;
-        margin-bottom: 100px;
-        letter-spacing: 2px;
-    }
-
-    h1 {
-        font-size: 4rem;
-    }
-
-    .notify-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 200px;
-    }
-    
-
-    #notify-btn {
-        position: absolute;
-        margin-top: -300px;
-        width: 300px;
-        height: 50px;
-        gap: 50px;
-        font-size: 1.5rem;
-    }
-
-    .hand-image{
-        width: 100px;
-    }
-
-    .creando{
-        position: absolute;
-        margin-top: 100px;
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 1280px) and (max-width: 1280px) and (min-height: 800px) and (max-height: 800px) {
-
-    .container {
-        gap: 50px;
-
-    }
-
-    h2{
-        font-size: 1.5rem;
-        margin-bottom: 100px;
-        letter-spacing: 2px;
-    }
-
-    h1 {
-        font-size: 4rem;
-    }
-
-    .notify-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 200px;
-    }
-    
-
-    #notify-btn {
-        position: absolute;
-        margin-top: -300px;
-        width: 300px;
-        height: 50px;
-        gap: 50px;
-        font-size: 1.5rem;
-    }
-
-    .hand-image{
-        width: 100px;
-    }
-
-    .creando{
-        position: absolute;
-        margin-top: 100px;
-        font-size: 1.5rem;
-    }
-}
-
-
 /* FORMULARIO DE NOTIFICAR ---------------------------------------------------------------------- */
 
 #emailForm {
@@ -417,7 +156,7 @@ p {
 }
 
 .cloud-move {
-    animation: cloudMove 20s linear infinite;
+    animation: cloudMove 2s linear infinite;
 }
 
 @keyframes cloudMove {
@@ -428,3 +167,78 @@ p {
         background-position: 100% 50%; /* Move to right */
     }
     }
+
+.bubble {
+    animation: bubbleExplotion 3s;
+}
+
+@keyframes bubbleExplotion {
+    from {
+        margin-top: 0;
+    }
+    to {
+        margin-top: 100;
+    }
+
+}
+
+/* Window Appearing Animation */
+@keyframes enter {
+    from {
+        opacity: 0;
+        transform: translateY(4px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.window-appear {
+    animation: enter 0.3s ease-out forwards;
+}
+
+/* Window Disappearing Animation */
+@keyframes exit {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(4px) scale(0.95);
+    }
+}
+
+.window-disappear {
+    animation: exit 0.2s ease-in forwards;
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .modal-content {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .modal-appear {
+    display: block !important;
+  }
+
+  .modal-appear .modal-backdrop {
+    opacity: 1;
+  }
+
+  .modal-appear .modal-content {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+/* Leaving: "ease-in duration-200"
+From: "opacity-100 translate-y-0 sm:scale-100"
+To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" */

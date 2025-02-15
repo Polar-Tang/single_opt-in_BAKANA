@@ -1,114 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Próximamente</title>
-    <!-- <link rel="stylesheet" href="./style.css"> -->
-    <link rel="icon" href="./public/bakana(1).png">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./output.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Página Próximamente</title>
+	<!-- <link rel="stylesheet" href="./style.css"> -->
+	<link rel="icon" href="./public/bakana(1).png">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./output.css">
 </head>
-<body >
-    <div
-    class="
-        grid 
-        grid-cols-1 
-        items-center 
-        h-screen 
-        bg-black 
-        text-center 
-        place-items-center
-        bg-black
-        bg-no-repeat 
-        min-h-screen
-        w-full 
-        bg-transparent
-        relative"
-        
-    >
-    
-        <form id="emailForm" 
-        class="
+
+<body class="overflow-hidden">
+
+
+	<div class="
+  grid 
+  grid-cols-1 
+  items-center 
+  h-screen 
+  bg-black 
+  text-center 
+  place-items-center
+  bg-black
+  bg-no-repeat 
+  w-full 
+  bg-transparent
+  relative">
+
+		<div class="absolute z-10 hidden
+  top-1/2 
+  .-translate-y-50" aria-labelledby="modal-title" id="modal-danger-window" role="dialog" aria-modal="true">
+			<div class="fixed inset-0 transition-opacity modal-backdrop" aria-hidden="true"></div>
+
+			<div class="fixed inset-0 z-10 w-screen">
+				<div class="flex min-h-full items-start justify-center p-4 text-center sm:items-center sm:p-0">
+					<div
+						class="relative transform overflow-hidden rounded-lg bg-white text-center transition-all sm:my-8 sm:w-full sm:max-w-lg">
+						<div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+							<div class="sm:flex sm:items-center">
+								<div
+									id="svg-modal-container"
+									class="mx-auto modal-container flex size-12 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-600 sm:mx-0 sm:size-10">
+									
+								</div>
+								<div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+									<h3 class="text-base font-semibold text-gray-900" id="modal-title">Algo sali&oacute;
+										mal</h3>
+									<div class="mt-2">
+										<p class="text-sm text-gray-500" id="modal-text">Porfavor, intente de nuevo
+											m&aacute;s tarde</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+							<button type="button"
+								class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50 sm:mt-0 sm:w-auto"
+								onclick=removeWindow()>Cancel</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<form id="emailForm" class="
         left-1/2
-        -translate-x-1/2 
-        -translate-y-1/8
+        top-1/2 
+        .-translate-y-50
         w-full 
-        h-screen
-        bg-no-repeat 
+        h-screen 
         opacity-0
-        absolute  
-        bg-contain 
+        absolute
         bg-no-repeat 
-        bg-center
-        " 
-        style="background-image: url('./public/nube.png')">
-        
-        <label for="email" class="block text-black text-sm  font-medium">Email:</label>
-        <input type="email" id="email" name="email" required
-          class="mt-1 p-2 w-50 border border-gray-300 rounded-md text-black-500" style="color: black;">
-        <button type="submit" class="mt-2 px-4 py-2 bg-white text-black-500 bg-transparent rounded-lg" style="color: black;">Submit</button>
-      </form> 
+        bg-center 
+        bg-contain
+        " style="background-image: url('./public/nube.png')">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"
+				class="absolute inset-0 w-full h-full pointer-events-none">
 
-        <!-- Title and Subtitle -->
+				<defs>
+					<filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+						<feGaussianBlur in="SourceGraphic" stdDeviation="4" />
+					</filter>
+
+					<radialGradient id="starGradient">
+						<stop offset="0%" stop-color="#3b82f6" stop-opacity="1" />
+						<stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
+					</radialGradient>
+				</defs>
+
+				<circle class="fill-current text-blue-500" cx="220" cy="170" r="3" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite" begin="0.3s" />
+				</circle>
+				<circle class="fill-current text-red-500" cx="290" cy="140" r="4" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="2.8s" repeatCount="indefinite" begin="0.9s" />
+				</circle>
+
+				<circle class="fill-current text-yellow-400" cx="410" cy="180" r="5" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" begin="1.2s" />
+				</circle>
+
+				<circle class="fill-current text-purple-500" cx="530" cy="160" r="3" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.4s" repeatCount="indefinite" begin="0.7s" />
+				</circle>
+
+				<circle class="fill-current text-green-500" cx="457" cy="45" r="4" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="2.4s" repeatCount="indefinite" begin="2.2s" />
+				</circle>
+
+				<circle class="fill-current text-orange-500" cx="700" cy="175" r="3" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0.2s" />
+				</circle>
+
+				<circle class="fill-current text-sky-500" cx="70" cy="250" r="3" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="5s" repeatCount="indefinite" begin="0.4s" />
+				</circle>
+
+				<circle class="fill-current text-yellow-500" cx="700" cy="80" r="3" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="5s" repeatCount="indefinite" begin="4s" />
+				</circle>
+				
+				<circle class="fill-current text-red-500" cx="150" cy="100" r="2" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.2s" repeatCount="indefinite" begin="0.2s" />
+				  </circle>
+				  <circle class="fill-current text-yellow-500" cx="280" cy="180" r="3" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0.5s" />
+				  </circle>
+				  <circle class="fill-current text-green-500" cx="400" cy="80" r="2" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.3s" repeatCount="indefinite" begin="0.8s" />
+				  </circle>
+				  <circle class="fill-current text-blue-500" cx="550" cy="220" r="4" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.6s" repeatCount="indefinite" begin="0.1s" />
+				  </circle>
+				  <circle class="fill-current text-indigo-500" cx="680" cy="150" r="3" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.4s" repeatCount="indefinite" begin="0.7s" />
+				  </circle>
+				  <circle class="fill-current text-purple-500" cx="200" cy="250" r="2" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.1s" repeatCount="indefinite" begin="0.4s" />
+				  </circle>
+				  <circle class="fill-current text-red-500" cx="350" cy="120" r="3" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.7s" repeatCount="indefinite" begin="0.9s" />
+				  </circle>
+				  <circle class="fill-current text-yellow-500" cx="480" cy="280" r="2" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.2s" repeatCount="indefinite" begin="0.3s" />
+				  </circle>
+					<circle class="fill-current text-green-500" cx="600" cy="100" r="4" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0.6s" />
+				  </circle>
+				  <circle class="fill-current text-blue-500" cx="720" cy="200" r="3" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.3s" repeatCount="indefinite" begin="0.8s" />
+				  </circle>
+				  <circle class="fill-current text-indigo-500" cx="180" cy="180" r="2" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.6s" repeatCount="indefinite" begin="0.1s" />
+				  </circle>
+				  <circle class="fill-current text-purple-500" cx="300" cy="220" r="4" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.1s" repeatCount="indefinite" begin="0.4s" />
+				  </circle>
+				  <circle class="fill-current text-red-500" cx="450" cy="150" r="3" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.7s" repeatCount="indefinite" begin="0.9s" />
+				  </circle>
+				  <circle class="fill-current text-yellow-500" cx="580" cy="250" r="2" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.2s" repeatCount="indefinite" begin="0.3s" />
+				  </circle>
+				  <circle class="fill-current text-green-500" cx="700" cy="120" r="3" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0.6s" />
+				  </circle>
+					<circle class="fill-current text-blue-500" cx="250" cy="200" r="2" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.3s" repeatCount="indefinite" begin="0.8s" />
+				  </circle>
+				  <circle class="fill-current text-indigo-500" cx="380" cy="180" r="4" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.6s" repeatCount="indefinite" begin="0.1s" />
+				  </circle>
+				  <circle class="fill-current text-purple-500" cx="500" cy="240" r="3" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.1s" repeatCount="indefinite" begin="0.4s" />
+				  </circle>
+					<circle class="fill-current text-red-500" cx="650" cy="160" r="2" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.7s" repeatCount="indefinite" begin="0.9s" />
+				  </circle>
+				  <circle class="fill-current text-yellow-500" cx="750" cy="220" r="4" filter="url(#blur)">
+					<animate attributeName="opacity" values="0;1;0" dur="1.2s" repeatCount="indefinite" begin="0.3s" />
+				  </circle>
+
+			</svg>
+			<label for="email" class="block text-black text-sm  font-medium">Email:</label>
+			<input type="email" id="email" name="email" required
+				class="mt-1 p-2 w-50 border border-gray-300 rounded-md text-black-500" style="color: black;">
+			<button type="submit" class="mt-2 px-4 py-2 bg-white text-black-500 bg-transparent rounded-lg hover:pointer"
+				style="color: black;">Submit</button>
+		</form>
 
 
-                 <h2 class="
+		<!-- Title and Subtitle -->
+
+
+		<h2 class="
                      w-60 
                  ">NUESTRA WEB ESTARÁ DISPONIBLE MUY PRONTO</h2>
-                 <h1 class="text-sm ">¡Próximamente!</h1>
-                 <p class="text-lg tracking-tight font-sans">Estamos creando para vos.</p>
+		<h1 class="text-sm ">¡Próximamente!</h1>
+		<p class="text-lg tracking-tight font-sans">Estamos creando para vos.</p>
 
 
-        <!-- Notify Button -->
-        <div class="relative flex justify-center">
-            <button id="notify-btn"
-                class="bg-white text-black px-8 py-3 text-lg font-sans rounded-full flex items-center justify-center relative">
-                <span>NOTIFICAR</span>
-                <span class="ml-2 relative w-6 h-6">
-                    <img src="./public/hand.gif"
-                        class="absolute top-1/2 left-1/2 -translate-x-1/8 -translate-y-1/2 max-w-6xl" />
-                </span>
-            </button>
-        </div>
+		<!-- Notify Button -->
+		<div class="relative flex justify-center">
+			<button id="notify-btn"
+				class="bg-white text-black px-8 py-3 text-lg font-sans rounded-full flex items-center justify-center relative">
+				<span>NOTIFICAR</span>
+				<span class="ml-2 relative w-6 h-6">
+					<img src="./public/hand.gif"
+						class="absolute top-1/2 left-1/2 -translate-x-1/8 -translate-y-1/2 max-w-6xl" />
+				</span>
+			</button>
+		</div>
 
-        <!-- Brand -->
-        <!-- <p class="text-sm tracking-wide mt-12">WHITE BAKANA®</p> -->
+		<!-- Brand -->
+		<!-- <p class="text-sm tracking-wide mt-12">WHITE BAKANA®</p> -->
 
-    </div>
+	</div>
 
-    <script>
-        const notifyBtn = document.getElementById('notify-btn')
-        const emailForm = document.getElementById('emailForm')
+	<script>
+		const styles = `
+@keyframes bubbleIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
 
-        notifyBtn.addEventListener('click', function () {
-            emailForm.classList.toggle('visible'); 
-        })
+@keyframes bubbleOut {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0;
+  }
+}
 
-        document.getElementById('emailForm').addEventListener('submit', async function (e) {
-            e.preventDefault()
-            const email = document.getElementById('email').value
+.form-opening {
+  animation: bubbleIn 0.5s ease-out forwards;
+}
 
-            const response = await fetch('https://fiscal-mommy-virtual-nautilus-a7c0219d.koyeb.app/ping', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ "email": email }),
-            })
-                .then(response => response.text()).then(data => console.log(data)).catch((error) => console.error('Error:', error))
+.form-closing {
+  animation: bubbleOut 0.5s ease-in forwards;
+}
 
-            const data = await response.json()
-           
-            if (response.ok) {
-                const result = await response.text()
-                alert(result)
-            } else {
-                console.error('Request failed:', response.status, response.statusText)
-                alert('Error submitting email')
-            }
-        })
+.form-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
-    </script>
+.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}`;
+
+		// Add the styles to the document
+		const styleSheet = document.createElement("style");
+		styleSheet.textContent = styles;
+		document.head.appendChild(styleSheet);
+		const notifyBtn = document.getElementById('notify-btn')
+		const emailForm = document.getElementById('emailForm')
+
+		function toggleForm() {
+			const isVisible = emailForm.classList.contains('form-opening');
+
+			if (!isVisible) {
+				emailForm.classList.remove('form-hidden');
+				emailForm.classList.add('form-opening');
+			} else {
+				emailForm.classList.remove('form-opening');
+				emailForm.classList.add('form-closing');
+
+				setTimeout(() => {
+					emailForm.classList.remove('form-closing');
+					emailForm.classList.add('form-hidden');
+				}, 500);
+			}
+		}
+
+		const modalDangerWindow = document.getElementById("modal-danger-window")
+		const toggleAlert = (isOkFromBackend) => {
+
+			if (modalDangerWindow.classList.contains('hidden')) {
+				modalDangerWindow.classList.remove('hidden');
+				modalDangerWindow.classList.add('modal-appear');
+
+				document.body.style.overflow = 'hidden';
+
+				const modalText = document.getElementById('modal-text')
+				const modalTitle = document.getElementById('modal-title')
+
+				const modalContainer = document.getElementById('svg-modal-container')
+
+				if (isOkFromBackend){
+					modalContainer.classList.remove('bg-red-100', 'text-red-600');
+					modalContainer.classList.add('bg-green-100', 'text-green-600');
+					
+					// Success SVG
+					 modalContainer.innerHTML = `
+				 <svg class="size-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+					 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+				 </svg>`;
+	
+					 modalTitle.textContent = "Operación exitosa"
+	
+					modalText.textContent = "Hemos enviado un correo a tu mail.";
+				} else {
+					modalContainer.innerHTML = `
+				 <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+										stroke="currentColor" aria-hidden="true" data-slot="icon">
+										<path stroke-linecap="round" stroke-linejoin="round"
+											d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+									</svg>`;
+				}
+
+				
+
+
+
+			}
+		}
+
+		const removeWindow = () => {
+			modalDangerWindow.classList.remove('modal-appear')
+			modalDangerWindow.classList.add('modal-backdrop')
+
+		}
+
+		notifyBtn.addEventListener('click', toggleForm);
+		// closeBtn.addEventListener('click', toggleForm);
+
+		document.getElementById('emailForm').addEventListener('submit', async function (e) {
+			e.preventDefault()
+			const email = document.getElementById('email').value
+			toggleForm()
+			setTimeout(() => {
+				toggleAlert(true)
+			}, 500);
+
+
+			const response = await fetch('https://fiscal-mommy-virtual-nautilus-a7c0219d.koyeb.app/ping', {
+			    method: 'POST',
+			    headers: {
+			        'Content-Type': 'application/json',
+			    },
+			    body: JSON.stringify({ "email": email }),
+			})
+			    .then(response => response.text()).then(data => console.log(data)).catch((error) => console.error('Error:', error))
+
+			const data = await response.json()
+
+			await toggleAlert(response.ok)
+			// if (response.ok) {
+			// 	const result = await response.text()
+			//     alert(result)
+			// 	toggleForm()
+			// }
+		})
+
+	</script>
 </body>
+
 </html>
