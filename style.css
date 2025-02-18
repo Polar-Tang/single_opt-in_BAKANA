@@ -67,6 +67,10 @@ p {
     /* margin: 20px 0; */
 }
 
+.cloud-letter {
+    font-family: 'TT Commons Pro';
+}
+
 .NOTIFICAR{
     font-family: 'Montserrat', sans-serif; 
     
@@ -156,15 +160,15 @@ p {
 }
 
 .cloud-move {
-    animation: cloudMove 2s linear infinite;
+    animation: cloudMove 0.5s linear infinite;
 }
 
 @keyframes cloudMove {
     0% {
-        background-position: 0% 50%; /* Start at left */
+        background-position: 0% 50%;
     }
     100% {
-        background-position: 100% 50%; /* Move to right */
+        background-position: 100% 50%;
     }
     }
 
@@ -239,6 +243,14 @@ p {
     transform: scale(1);
   }
 
+
+.grey-metalic {
+    /* color: #777777; */
+    /* color: rgb(200, 50, 0); */
+    /* color: rgb(0, 100, 200); */
+    color: rgb(0, 150, 50);
+
+}
 /* Leaving: "ease-in duration-200"
 From: "opacity-100 translate-y-0 sm:scale-100"
 To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" */
