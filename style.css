@@ -1,9 +1,4 @@
 @font-face {
-    font-family: 'TT Commons Pro';
-    src: url('./fonts/TT_Commons_Pro.ttf') format('truetype');
-}
-
-@font-face {
     font-family: 'Castoro';
     src: url('./fonts/CastoroTitling-Regular.ttf') format('truetype');
 }
@@ -18,8 +13,8 @@
     src: url('./fonts/static/Montserrat-Regular.ttf') format('truetype');
 }
 * {
-    margin: 0;
-    padding: 0;
+    /* margin: 0; */
+    /* padding: 0; */
     box-sizing: border-box;
     min-width: 0;
     overflow-wrap: break-word;
@@ -41,24 +36,17 @@ body {
     background-color: black;
     color: white;
     text-align: center;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
 
 h1 {
     font-family: 'Vollkorn', serif;
-    font-size: 2rem;
-    font-weight: normal;
-    /* margin: 100px 0; */
-    /* margin-bottom: 100px; */
 }
 
 h2 {
     font-family: 'Vollkorn', serif; 
-    font-size: 1rem;
-    /* margin-bottom: 100px; */
-    letter-spacing: 2px;
 }
 
 p {
@@ -67,13 +55,13 @@ p {
     /* margin: 20px 0; */
 }
 
-.cloud-letter {
-    font-family: 'TT Commons Pro';
-}
-
-.NOTIFICAR{
+.notificar-p{
     font-family: 'Montserrat', sans-serif; 
     
+}
+
+.email-label {
+    font-family: 'Vollkorn', serif; 
 }
 
  .notify-container {
@@ -83,8 +71,6 @@ p {
 #notify-btn {
     background-color: white;
     color: black;
-    padding: 10px 30px;
-    font-size: 1rem;
     border: none;
     border-radius: 30px;
     position: relative;
@@ -96,7 +82,7 @@ p {
 
 .icon-hand {
     display: inline-block;
-    font-family: 'Poppins, Montserrat';
+    font-family: 'Montserrat', sans-serif;
     /* margin-left: 10px; */
     background-size: cover;
     width: 20px;
@@ -127,7 +113,6 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column; 
-    font-size: 1.5rem;
     object-fit: cover;
     height: 100%;
     background-size: 100%;

@@ -17,6 +17,8 @@
 	<div class="
   grid 
   grid-cols-1 
+  grid-rows-[1fr_3fr_1fr_1fr]
+  gap-4
   items-center 
   h-screen 
   bg-black 
@@ -70,13 +72,20 @@
         left-1/2
         top-1/2 
         .-translate-y-50
-        w-full 
+        w-90 
+		sm:w-150
+		lg:w-200
+		xl:w-250
+		2xl:w-300
         h-screen 
         opacity-0
         absolute
         bg-no-repeat 
         bg-center 
         bg-contain
+		gap-2
+		lg:gap-4
+		2xl:gap-6
         " style="background-image: url('./public/nube.png')">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"
 				class="absolute inset-0 w-full h-full pointer-events-none">
@@ -185,30 +194,60 @@
 				  </circle>
 
 			</svg>
-			<label for="email" class="block text-black text-9xl m-10 font-medium cloud-letter">Email:</label>
+			<label for="email" class="block text-black text-lg sm:text-2xl 2xl:text-3xl font-medium email-label">Email:</label>
 			<input type="email" id="email" name="email" required
-				class="mt-1 p-2 w-50 border border-gray-300 rounded-md text-black-500" style="color: black;">
-			<button type="submit" class="mt-2 px-4 py-2 bg-white text-black-500 bg-transparent rounded-lg hover:pointer cloud-letter"
+				class="px-4 py-2 w-50 sm:w-80 lg:w-100 h-6 lg:py-4 border border-gray-300 rounded-md text-black-500 
+				focus:border-indigo-500/50 focus:outline" style="color: black;">
+			<button type="submit"  
+			class="px-4 py-2 lg:px-8 lg:py-4 bg-white xl:text-xl text-base font-medium lg:py-4 lg:text-xl rounded-full hover:cursor-pointer shadow-sm hover:shadow-md transition-all"
 				style="color: black;">Notificar</button>
 		</form>
-
 
 		<!-- Title and Subtitle -->
 
 
-		<h2 class="w-60">NUESTRA WEB ESTARÁ DISPONIBLE MUY PRONTO</h2>
-		<h1 class="text-sm ">¡Próximamente!</h1>
-		<p class="text-lg tracking-tight font-sans">Estamos creando para vos.</p>
+		<h2 class="w-60 
+		text-[16px]
+		sm:text-[24px]
+		sm:w-80
+		lg:text-[28px]
+		lg:w-100
+		xl:text-[26px]
+		2xl:w-140
+		2xl:text-[32px]
+		">NUESTRA WEB ESTARÁ DISPONIBLE MUY PRONTO</h2>
+		<h1 class="text-[40px] sm:text-[60px] 
+		sm:text-[90px]
+		lg:text-[100px]
+		xl:text-[110px]
+		2xl:text-[120px]">¡Próximamente!</h1>
+		<p class=" 
+		tracking-tight 
+		font-sans 
+		m-10 
+		text-[16px]-2
+		sm:text-[20px]
+		lg:text-[24px]
+		xl:text-[28px]
+		2xl:text-[32px]
+		">Estamos creando para vos</p>
 
 
 		<!-- Notify Button -->
 		<div class="relative flex justify-center">
 			<button id="notify-btn"
-			class="bg-white text-black px-8 py-3 text-lg font-sans rounded-full flex items-center justify-center relative 
-			shadow-lg transition-all duration-150 
-			hover:shadow-2xl hover:translate-y-1 
-			active:shadow-xl active:translate-y-2">
-				<span>NOTIFICAR</span>
+			class="bg-white text-black 
+			px-8 
+			py-3 
+			text-lg font-sans rounded-full flex items-center justify-center relative 
+			inset-shadow-sm inset-shadow-indigo-500
+			hover:inset-shadow-sm inset-shadow-indigo-500/50
+			text-base
+			sm:text-[24px]
+			lg:text-[28px]
+			xl:text-[32px]
+			2xl:text-[36px]">
+				Notificar
 				<span class="ml-2 relative w-6 h-6">
 					<img src="./public/hand.gif"
 						class="absolute top-1/2 left-1/2 -translate-x-1/8 -translate-y-1/2 max-w-6xl" />
@@ -313,9 +352,9 @@
 					 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
 				 </svg>`;
 	
-					 modalTitle.textContent = "Operación exitosa"
+					 modalTitle.textContent = "Te hemos enviado un mail"
 	
-					modalText.textContent = "Hemos enviado un correo a tu mail.";
+					modalText.textContent = "Gracias por formar parte de nuestra comunidad 🥹";
 				} else {
 					modalContainer.innerHTML = `
 				 <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
