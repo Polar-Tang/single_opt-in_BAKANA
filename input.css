@@ -5,6 +5,13 @@
 @layer base {
   img {
     width: 60px;
+  } 
+}
+
+@layer components {
+  @media (min-height: 640px) {
+    .full-screen-height-lg {
+      height: 100vh;
+    }
   }
-  
 }
