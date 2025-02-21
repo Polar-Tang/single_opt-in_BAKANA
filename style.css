@@ -13,8 +13,8 @@
     src: url('./fonts/static/Montserrat-Regular.ttf') format('truetype');
 }
 * {
-    margin: 0; 
-    padding: 0; 
+    /* margin: 0;  */
+    /* padding: 0;  */
     box-sizing: border-box;
     min-width: 0;
     overflow-wrap: break-word;
