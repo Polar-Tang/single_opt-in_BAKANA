@@ -587,14 +587,8 @@
   .end-2 {
     inset-inline-end: calc(var(--spacing) * 2);
   }
-  .top-1 {
-    top: calc(var(--spacing) * 1);
-  }
   .top-1\/2 {
     top: calc(1/2 * 100%);
-  }
-  .left-1 {
-    left: calc(var(--spacing) * 1);
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
@@ -829,9 +823,6 @@
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
-  .h-full {
-    height: 100%;
-  }
   .h-screen {
     height: 100vh;
   }
@@ -846,9 +837,6 @@
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -968,16 +956,8 @@
     --tw-translate-y: 100%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-  .-translate-x-1 {
-    --tw-translate-x: calc(var(--spacing) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
   .-translate-x-1\/8 {
     --tw-translate-x: calc(calc(1/8 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-1 {
-    --tw-translate-y: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
@@ -986,14 +966,6 @@
   }
   .-translate-y-50 {
     --tw-translate-y: calc(var(--spacing) * -50);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-y-0 {
-    --tw-translate-y: calc(var(--spacing) * 0);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-y-4 {
-    --tw-translate-y: calc(var(--spacing) * 4);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-z-px {
@@ -1536,6 +1508,9 @@
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
+  .border-indigo-500 {
+    border-color: var(--color-indigo-500);
+  }
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
   }
@@ -1696,9 +1671,6 @@
   .bg-origin-padding {
     background-origin: padding-box;
   }
-  .fill-current {
-    fill: currentColor;
-  }
   .fill-none {
     fill: none;
   }
@@ -1818,10 +1790,6 @@
   }
   .font-sans {
     font-family: var(--font-sans);
-  }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-base {
     font-size: var(--text-base);
@@ -2097,9 +2065,6 @@
   .opacity-0 {
     opacity: 0%;
   }
-  .opacity-100 {
-    opacity: 100%;
-  }
   .mix-blend-plus-darker {
     mix-blend-mode: plus-darker;
   }
@@ -2261,10 +2226,6 @@
   }
   .transition-normal {
     transition-behavior: normal;
-  }
-  .duration-200 {
-    --tw-duration: 200ms;
-    transition-duration: 200ms;
   }
   .ease-in {
     --tw-ease: var(--ease-in);
@@ -2510,11 +2471,6 @@
       width: calc(var(--spacing) * 80);
     }
   }
-  .sm\:w-100 {
-    @media (width >= 40rem) {
-      width: calc(var(--spacing) * 100);
-    }
-  }
   .sm\:w-150 {
     @media (width >= 40rem) {
       width: calc(var(--spacing) * 150);
@@ -2533,28 +2489,6 @@
   .sm\:max-w-lg {
     @media (width >= 40rem) {
       max-width: var(--container-lg);
-    }
-  }
-  .sm\:translate-y-0 {
-    @media (width >= 40rem) {
-      --tw-translate-y: calc(var(--spacing) * 0);
-      translate: var(--tw-translate-x) var(--tw-translate-y);
-    }
-  }
-  .sm\:scale-95 {
-    @media (width >= 40rem) {
-      --tw-scale-x: 95%;
-      --tw-scale-y: 95%;
-      --tw-scale-z: 95%;
-      scale: var(--tw-scale-x) var(--tw-scale-y);
-    }
-  }
-  .sm\:scale-100 {
-    @media (width >= 40rem) {
-      --tw-scale-x: 100%;
-      --tw-scale-y: 100%;
-      --tw-scale-z: 100%;
-      scale: var(--tw-scale-x) var(--tw-scale-y);
     }
   }
   .sm\:flex-row-reverse {
@@ -2618,12 +2552,6 @@
       font-size: 90px;
     }
   }
-  .md\:text-2xl {
-    @media (width >= 48rem) {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
-  }
   .lg\:w-100 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 100);
@@ -2637,11 +2565,6 @@
   .lg\:gap-4 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 4);
-    }
-  }
-  .lg\:gap-8 {
-    @media (width >= 64rem) {
-      gap: calc(var(--spacing) * 8);
     }
   }
   .lg\:px-8 {
@@ -2678,42 +2601,6 @@
   .xl\:w-250 {
     @media (width >= 80rem) {
       width: calc(var(--spacing) * 250);
-    }
-  }
-  .xl\:gap-1 {
-    @media (width >= 80rem) {
-      gap: calc(var(--spacing) * 1);
-    }
-  }
-  .xl\:gap-2 {
-    @media (width >= 80rem) {
-      gap: calc(var(--spacing) * 2);
-    }
-  }
-  .xl\:gap-4 {
-    @media (width >= 80rem) {
-      gap: calc(var(--spacing) * 4);
-    }
-  }
-  .xl\:gap-6 {
-    @media (width >= 80rem) {
-      gap: calc(var(--spacing) * 6);
-    }
-  }
-  .xl\:gap-10 {
-    @media (width >= 80rem) {
-      gap: calc(var(--spacing) * 10);
-    }
-  }
-  .xl\:py-6 {
-    @media (width >= 80rem) {
-      padding-block: calc(var(--spacing) * 6);
-    }
-  }
-  .xl\:text-8xl {
-    @media (width >= 80rem) {
-      font-size: var(--text-8xl);
-      line-height: var(--tw-leading, var(--text-8xl--line-height));
     }
   }
   .xl\:text-xl {
@@ -2757,34 +2644,10 @@
       gap: calc(var(--spacing) * 6);
     }
   }
-  .\32 xl\:text-2xl {
-    @media (width >= 96rem) {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
-  }
   .\32 xl\:text-3xl {
     @media (width >= 96rem) {
       font-size: var(--text-3xl);
       line-height: var(--tw-leading, var(--text-3xl--line-height));
-    }
-  }
-  .\32 xl\:text-4xl {
-    @media (width >= 96rem) {
-      font-size: var(--text-4xl);
-      line-height: var(--tw-leading, var(--text-4xl--line-height));
-    }
-  }
-  .\32 xl\:text-lg {
-    @media (width >= 96rem) {
-      font-size: var(--text-lg);
-      line-height: var(--tw-leading, var(--text-lg--line-height));
-    }
-  }
-  .\32 xl\:text-xl {
-    @media (width >= 96rem) {
-      font-size: var(--text-xl);
-      line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
   .\32 xl\:text-\[32px\] {
@@ -3095,10 +2958,6 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-ease {
   syntax: "*";
   inherits: false;
@@ -3116,6 +2975,10 @@
   inherits: false;
 }
 @property --tw-contain-style {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
   syntax: "*";
   inherits: false;
 }
